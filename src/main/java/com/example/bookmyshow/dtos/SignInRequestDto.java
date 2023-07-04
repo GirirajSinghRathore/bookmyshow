@@ -4,10 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter@Setter
+@Getter
+@Setter
 @AllArgsConstructor
-public class SignUpRequestDto {
+public class SignInRequestDto {
     private String email;
     private String password;
-    private String name;
 }
