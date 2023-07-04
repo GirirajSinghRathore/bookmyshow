@@ -4,7 +4,7 @@ import com.example.bookmyshow.dtos.*;
 import com.example.bookmyshow.model.User;
 import com.example.bookmyshow.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import org.springframework.stereotype.Controller;
 
 @Controller

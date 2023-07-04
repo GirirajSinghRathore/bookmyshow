@@ -11,12 +11,12 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+    private final BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
     @Autowired
     UserRepository userRepository;
     public User signUp(String email, String password,String name) throws Exception {
         Optional<User> user = userRepository.findByEmail(email);
-        if(!user.isEmpty()){
+        if(user.isPresent()){
             throw new Exception("User already Exists");
         }
         User u = new User();

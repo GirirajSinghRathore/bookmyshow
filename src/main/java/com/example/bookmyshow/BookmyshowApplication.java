@@ -2,14 +2,13 @@ package com.example.bookmyshow;
 
 import com.example.bookmyshow.controller.UserController;
 import com.example.bookmyshow.dtos.*;
-import com.example.bookmyshow.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 
 @EnableJpaAuditing
 @SpringBootApplication
@@ -24,7 +23,7 @@ public class BookmyshowApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args)  {
 		SignUpResponseto signUpResponseto= userController.signUp(new SignUpRequestDto("gsr2@email.com","rthrt","Giriraj"));
 		if(signUpResponseto.getResponseStatus().equals(ResponseStatus.SUCCESS)){
 			System.out.println("--------- SignUp Successful  --------");
